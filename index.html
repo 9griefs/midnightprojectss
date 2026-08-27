@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>for shreya</title>
+<meta name="description" content="a small apology, for a very big friend." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,340;0,9..144,500;0,9..144,600;0,9..144,680;1,9..144,400;1,9..144,500&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- grain / vignette overlay, sits above everything, purely decorative -->
+<div class="grain" aria-hidden="true"></div>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
+<!-- persistent sound control -->
+<button class="sound-toggle" id="soundToggle" type="button" aria-label="Mute music" aria-pressed="false">
+  <svg class="icon-on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M19 6a9 9 0 0 1 0 12" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.6"/></svg>
+  <svg class="icon-off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M15.5 9.5l5 5M20.5 9.5l-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+</button>
+
+<main id="experience">
+
+  <!-- ============ SCREEN 0 — INTRO ============ -->
+  <section class="screen intro" id="intro" aria-label="Introduction">
+    <div class="intro__field">
+      <p class="intro__eyebrow">a small something for</p>
+      <h1 class="intro__name">Shreya</h1>
+
+      <button class="ribbon" id="ribbonBtn" type="button" aria-label="Click to open">
+        <span class="ribbon__tail ribbon__tail--left" aria-hidden="true"></span>
+        <span class="ribbon__body">
+          <span class="ribbon__text">Click me</span>
+        </span>
+        <span class="ribbon__tail ribbon__tail--right" aria-hidden="true"></span>
+      </button>
+
+      <p class="intro__hint">(this has sound, by the way)</p>
+    </div>
+    <div class="intro__specks" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ SCREEN 1 — HALOOO ============ -->
+  <section class="screen halooo" id="halooo" aria-label="Greeting">
+    <div class="halooo__ornament halooo__ornament--tl" aria-hidden="true"></div>
+    <div class="halooo__ornament halooo__ornament--br" aria-hidden="true"></div>
+
+    <div class="halooo__content">
+      <div class="halooo__wordmark">
+        <span class="halooo__word">HALOOO</span>
+        <span class="halooo__face">>w&lt;</span>
+      </div>
+      <p class="halooo__sub">yes this is a whole website. yes it's about you. sit down.</p>
+
+      <button class="next-link" id="toRanking" type="button">
+        <span>click here!!</span>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M9 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN 2 — RANKING / CHAOS ============ -->
+  <section class="screen ranking" id="ranking" aria-label="The unserious rankings">
+    <div class="ranking__sky" aria-hidden="true"></div>
+
+    <div class="ranking__stage" id="rankingStage">
+
+      <header class="ranking__masthead">
+        <span class="ranking__tag">EXHIBIT A</span>
+        <h2 class="ranking__title">a very scientific ranking</h2>
+      </header>
+
+      <div class="rank-slides" id="rankSlides">
+        <figure class="rank-slide is-active" data-slide="0">
+          <img src="assets/img/rank-intro.jpg" alt="Meme announcing a ranking of things I did as your goated hb" loading="lazy" />
+        </figure>
+        <figure class="rank-slide" data-slide="1">
+          <img src="assets/img/rank-list.jpg" alt="Ranking: 1st became your goated hb, 2nd made this website for you, 3rd wrote a paragraph for Aditi (I should be executed)" loading="lazy" />
+        </figure>
+        <figure class="rank-slide" data-slide="2">
+          <img src="assets/img/rank-memes.jpg" alt="Some pictures I found of you while scrolling — assorted cat memes" loading="lazy" />
+        </figure>
+      </div>
+
+      <div class="rank-controls">
+        <div class="rank-dots" id="rankDots" role="tablist" aria-label="Slide navigation">
+          <button class="rank-dot is-active" data-go="0" role="tab" aria-label="Slide 1"></button>
+          <button class="rank-dot" data-go="1" role="tab" aria-label="Slide 2"></button>
+          <button class="rank-dot" data-go="2" role="tab" aria-label="Slide 3"></button>
+        </div>
+        <button class="rank-next" id="rankNext" type="button">
+          <span id="rankNextLabel">next</span>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M9 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN 3 — APOLOGY PART I ============ -->
+  <section class="screen letter" id="letter1" aria-label="A letter, part one" style="--bg: url('assets/img/apology-1.jpg')">
+    <div class="letter__scrim"></div>
+    <div class="letter__inner">
+      <p class="letter__mark">i.</p>
+      <p class="letter__body">
+        Shreya, I genuinely don't even know where to begin because there are so many things I've felt that I probably should've told you a long time ago. I'm sorry if I've ever made you feel like you mattered less to me, like you were overlooked, or like I appreciated other people more openly than I appreciated you. Looking back, I can understand why some of my actions may have hurt you, especially because you've always been someone who's consistently been there for me.
+      </p>
+      <p class="letter__body">
+        The truth is, caring about someone and actually making them feel cared about are two different things, and I don't think I've always done the second one well enough with you. And you genuinely deserve better than that. You're one of the most beautiful people I know, exactly as you are, and your brown skin is beautiful too&nbsp;&mdash; you never need to be lighter or different to be considered pretty. But honestly, what makes you even more beautiful is the kind of person you are.
+      </p>
+      <p class="letter__body">
+        You're one of the most genuine people I've ever known. There have been so many times when I've been overwhelmed, upset, confused, or literally crying for help, and somehow, you were always there. You showed up, you listened, and you somehow managed to make me laugh even when I didn't feel like laughing. You're also mentally so much stronger than you probably realise, and the way you keep going through things genuinely amazes me. One of my favourite things about us is just how much we can make each other laugh&nbsp;😭&nbsp;&mdash; even the most random and unserious conversations somehow become memories I'll always remember.
+      </p>
+      <span class="letter__scroll-cue" aria-hidden="true">keep scrolling</span>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN 4 — APOLOGY PART II ============ -->
+  <section class="screen letter" id="letter2" aria-label="A letter, part two" style="--bg: url('assets/img/apology-2.jpg')">
+    <div class="letter__scrim"></div>
+    <div class="letter__inner">
+      <p class="letter__mark">ii.</p>
+      <p class="letter__body">
+        And after Navya passed away, everything felt different. Nobody could ever replace her, and I don't think anyone ever will, but somewhere along the way, you came into my life and became someone incredibly important to me in your own completely different way. Sometimes it genuinely feels like you were an angel sent by her&nbsp;&mdash; not to replace her, never that, but almost like life sent me someone who would be there when I needed someone again.
+      </p>
+      <p class="letter__body">
+        Someone who would listen to me, laugh with me, deal with my nonsense&nbsp;😭, and still show up whenever things got difficult. And that's why I feel especially bad knowing that I haven't always shown you the appreciation you deserve. You've been there for me, watched and replied to the countless reels I send you, listened when I needed help, made me laugh, and become such an important part of my life, yet I haven't always made you feel as appreciated as you actually are.
+      </p>
+      <p class="letter__body">
+        I'm not writing this because I expect one apology to magically fix everything or undo anything that hurt you. I just want you to know that I've actually thought about it and realised that I can't just assume people know how much they mean to me&nbsp;&mdash; I need to show them too. So I'm genuinely sorry, Shreya, for every time I've unintentionally made you feel less appreciated, less important, or overlooked. You didn't deserve that.
+      </p>
+      <p class="letter__body letter__body--close">
+        You're funny, strong, beautiful, genuine, caring, and genuinely one of the people I'm most grateful to have in my life. I hope that from now on, I'm better at reminding you of that, because you deserve to know just how appreciated and important you actually are to me.&nbsp;🤍
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SCREEN 5 — OUTRO ============ -->
+  <section class="screen outro" id="outro" aria-label="Closing">
+    <div class="outro__content">
+      <p class="outro__line">that's it. that's the website.</p>
+      <p class="outro__signature">thank you for being you &mdash; on repeat, this one's for you.</p>
+      <button class="replay" id="replayBtn" type="button">start over</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ AUDIO ============ -->
+<audio id="track-intro" src="assets/audio/01-iktara.mp3" preload="auto" loop></audio>
+<audio id="track-halooo" src="assets/audio/02-kyon-na-hum-tum.mp3" preload="auto" loop></audio>
+<audio id="track-ranking" src="assets/audio/03-gucci.mp3" preload="auto" loop></audio>
+<audio id="track-letter" src="assets/audio/04-yaariyan.mp3" preload="auto" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
